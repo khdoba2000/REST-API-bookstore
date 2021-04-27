@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"encoding/json"
-	"github.com/example/REST-API/models"
+	"github.com/khdoba2000/REST-API-bookstore/models"
 	"net/http"
 	"strconv"
 

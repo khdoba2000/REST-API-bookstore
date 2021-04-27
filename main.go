@@ -6,7 +6,7 @@ import (
 	"log"
 	"github.com/gorilla/mux"
 	_ "github.com/lib/pq"
-	"github.com/example/REST-API/urls"
+	"github.com/khdoba2000/REST-API-bookstore/urls"
 
 )
 

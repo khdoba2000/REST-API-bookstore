@@ -3,7 +3,7 @@ package urls
 import (
 	"log"
 	"net/http"
-	"github.com/example/REST-API/controllers"
+	"github.com/khdoba2000/REST-API-bookstore/controllers"
 	"github.com/gorilla/mux"
 )
 
