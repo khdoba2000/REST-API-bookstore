@@ -2,17 +2,15 @@ package controllers
 
 import (
 	"encoding/json"
-	"github.com/khdoba2000/REST-API-bookstore/models"
+	"fmt"
 	"net/http"
-	"strconv"
 
-
+	"github.com/khdoba2000/REST-API-bookstore/models"
 )
 
-
-func allArticles(w http.ResponseWriter, r *http.Request) {
-	articles := Articles{
-		Article{
+func AllArticles(w http.ResponseWriter, r *http.Request) {
+	articles := models.Articles{
+		models.Article{
 			Title:   "Test Title",
 			Desc:    "Test Description",
 			Content: "Hello World",
@@ -23,13 +21,11 @@ func allArticles(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(articles)
 }
 
-func testPostArticles(w http.ResponseWriter, r *http.Request) {
+func TestPostArticles(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "testPost Article EndPoint Mit")
 
 }
 
-
-
-func homePage(w http.ResponseWriter, r *http.Request) {
+func HomePage(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "homepage EndPoint Mit")
 }

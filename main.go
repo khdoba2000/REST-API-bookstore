@@ -1,15 +1,10 @@
 package main
 
 import (
-	"encoding/json"
-	"fmt"
-	"log"
-	"github.com/gorilla/mux"
-	_ "github.com/lib/pq"
 	"github.com/khdoba2000/REST-API-bookstore/urls"
 
+	_ "github.com/lib/pq"
 )
-
 
 func main() {
 
@@ -52,5 +47,5 @@ func main() {
 	// }
 
 	// CheckError(err)
-	urls.handleRequest()
+	urls.HandleRequest()
 }

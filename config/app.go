@@ -3,7 +3,7 @@ package config
 import (
 	"database/sql"
 	"fmt"
-	"github.com/gorilla/mux"
+
 	_ "github.com/lib/pq"
 )
 
@@ -14,7 +14,6 @@ const (
 	password = "khdoba19012000"
 	dbname   = "postgres"
 )
-
 
 func Connect() {
 	// Please define your user name and password for my sql.
@@ -29,18 +28,13 @@ func Connect() {
 	CheckError(err)
 	fmt.Println("Connected!")
 
-	
 	// close database
 	defer db.Close()
 
-
 }
-
-
 
 func CheckError(err error) {
 	if err != nil {
 		panic(err)
 	}
 }
-

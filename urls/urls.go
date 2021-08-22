@@ -3,17 +3,19 @@ package urls
 import (
 	"log"
 	"net/http"
-	"github.com/khdoba2000/REST-API-bookstore/controllers"
+
 	"github.com/gorilla/mux"
+	"github.com/khdoba2000/REST-API-bookstore/controllers"
 )
 
-func handleRequest() {
+func HandleRequest() {
 
 	myRouter := mux.NewRouter().StrictSlash(true)
 
-	myRouter.HandleFunc("/", controllers.homePage)
-	myRouter.HandleFunc("/articles", controllers.allArticles).Methods("GET")
-	myRouter.HandleFunc("/articles", controllers.testPostArticles).Methods("POST")
+	myRouter.HandleFunc("/", controllers.HomePage)
+	myRouter.HandleFunc("/articles", controllers.AllArticles).Methods("GET")
+	myRouter.HandleFunc("/articles", controllers.TestPostArticles).Methods("POST")
+	log.Println("Listening on port 8081")
 	log.Fatal(http.ListenAndServe(":8081", myRouter))
 
 }
